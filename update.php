@@ -65,6 +65,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input type="email" name="email" required><br>
         <input type="submit" value="Tambah Data">
     </form>
+    <a href="index.php">LINK KE INDEX</a>
 </body>
 </html>
-[file content end]
