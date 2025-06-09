@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
 
     $insertQuery = "INSERT INTO siswa (nama, nis, kelas, email) VALUES ('$nama', '$nis', '$kelas', '$email')";
-    
+
     if (mysqli_query($koneksi, $insertQuery)) {
         echo "Data berhasil ditambahkan! Dan siap dicuri <br>";
     } else {
@@ -18,14 +18,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <!-- Option 1: Include in HTML -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet" >
 </head>
+
 <body bgcolor="Red">
     <h2 class="jumbotron text-center">Form tambah data siswa</h2>
     <form action="create.php" method="post">
@@ -43,4 +44,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <br>
     <a href="index.php">Kembali ke daftar siswa</a>
 </body>
+
 </html>

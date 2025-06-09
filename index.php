@@ -11,7 +11,7 @@ $resultQuery = mysqli_query($koneksi, $readQuery);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>web</title>
+    <title>Web Data Siswa</title>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
@@ -22,12 +22,13 @@ $resultQuery = mysqli_query($koneksi, $readQuery);
 
     <table border="1">
         <tr>
-            <i class='bx  bx-user-square'></i> 
+            <i class='bx bx-user-square'>  Web Data Siswa</i> 
             <th>Id</th>
             <th>Nama</th>
             <th>NIS</th>
             <th>Kelas</th>
             <th>Email</th>
+            <th colspan="2">Aksi</th>
         </tr>
 
         <?php
@@ -39,15 +40,12 @@ $resultQuery = mysqli_query($koneksi, $readQuery);
                 <td><?php echo htmlspecialchars($row['nis']); ?> </td>
                 <td><?php echo htmlspecialchars($row['kelas']); ?> </td>
                 <td><?php echo htmlspecialchars($row['email']); ?> </td>
-                <td><button><a href="update.php?id=<?php echo $row['id'];?>">Edit Data</a></button></td>
+                <td><button><a href="update.php?id=<?php echo $row['id'];?>" style="text-decoration: none; color: black;">Edit Data</a></button></td>
                 <td><button onclick="confirmDelete(<?php echo $row['id']; ?>)">Hapus Data</button></td>
-    
             </tr>
         <?php endwhile; } else{}?>
-        
-        
     </table>
-    <a href="create.php">create</a>
+    <button style="margin-top: 5px;"><a style="text-decoration: none; color: black;" href="create.php">create</a></button>
 </body>
 
 </html>

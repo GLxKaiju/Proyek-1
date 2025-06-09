@@ -18,7 +18,4 @@ if(isset($_GET['id'])) {
 } else {
     die("ID tidak ditemukan!");
 }
-
-mysqli_close($koneksi);
-
-?>  
+?>
